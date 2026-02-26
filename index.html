@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nafasi Foods - Authentic African Smoked Meats</title>
+    <meta name="description" content="Authentic African smoked meats, crafted with love and tradition. Wood-fired perfection delivered to your door.">
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Important Notice Popup -->
+<div class="notice-overlay active" id="noticeOverlay"></div>
+<div class="notice-popup active" id="noticePopup">
+    <div class="notice-header">
+        <div class="notice-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+                <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+        </div>
+        <h2>Important Notice</h2>
+    </div>
+    <div class="notice-body">
+        <p>To maintain the highest quality and minimize waste, we prepare smoked meats based on pre-orders only.</p>
+        <p>Occasionally, we may offer additional smoked meat varieties depending on availability. All products adhere to our rigorous slow-smoking process and quality standards.</p>
+    </div>
+    <button class="notice-close-btn" id="noticeCloseBtn" aria-label="Close notice">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+        Close & Start Shopping
+    </button>
+</div>
+
+<!-- Header -->
+<header class="header">
+    <div class="header-container">
+        <a href="#" class="logo">
+            <div class="logo-icon">
+                <img src="Logo.svg" alt="Nafasi Logo" loading="lazy">
+            </div>
+            <span class="logo-text">Nafasi Foods</span>
+        </a>
+        <nav class="nav">
+            <a href="#menu" class="nav-link">Menu</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#find-us" class="nav-link">Find Us</a>
+        </nav>
+        <a href="https://wa.me/27671231122?text=Hi%20I%20would%20like%20to%20place%20an%20order!" class="btn btn-primary header-cta">Chat With Us</a>
+        <button class="mobile-menu-btn" aria-label="Toggle menu" id="mobileMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <!-- Mobile-only menu -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="#menu" class="mobile-nav-link">Menu</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#find-us" class="mobile-nav-link">Find Us</a>
+            <a href="tel:+27671231122" class="mobile-nav-link">Contact Us</a>
+        </nav>
+        <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <div class="hero-logo">
+            <img src="Logo.svg" alt="Nafasi Logo" loading="lazy">
+        </div>
+        <h1 class="hero-title">WHERE FIRE MEETS <span class="text-primary">FLAVOUR</span></h1>
+        <p class="hero-subtitle">Authentic African Smoked Chicken &bull; Meats &bull; Fish</p>
+        <div class="hero-buttons">
+            <a href="https://wa.me/27671231122?text=Hi%20I%20would%20like%20to%20place%20an%20order!" class="btn btn-primary">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                Order Now
+            </a>
+            <a href="#menu" class="btn btn-outline">View Menu</a>
+        </div>
+        <div class="hero-contact">
+            <a href="tel:+27671231122" class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                067 123 11 22
+            </a>
+            <a href="https://instagram.com/Nafasi_foods" class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                @Nafasi_foods
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Menu Section -->
+<section id="menu" class="menu">
+    <div class="menu-container">
+        <h2 class="section-title centered">Our <span class="text-primary">Smoked</span> Specials</h2>
+        <p class="section-subtitle">Taste low and slow smoked meat &mdash; crafted with patience, real fire, and an uncompromising focus on quality.</p>
+        <div class="menu-grid">
+            <div class="menu-card">
+                <div class="menu-card-image">
+                    <span class="badge badge-popular">+/- 1,2kg -1,5kg</span>
+                    <img src="images/hard-body-chicken.webP" alt="Hard Body Chicken" loading="lazy">
+                </div>
+                <div class="menu-card-content">
+                    <h3 class="menu-card-title"><span class="text-primary">Smoked</span> Whole Chicken +/- 1,2kg -1,5kg</h3>
+                    <p class="menu-card-alt">Carefully smoked until tender and flavourful, then vacuum-sealed for freshness.</p>
+                    <p class="menu-card-description">&bull; <strong>Hard Body Chicken – firm texture, deep smoky flavour</strong><br>&bull; <strong>Broiler Chicken – softer, juicy texture</strong></p>
+                    <p class="menu-card-alt">Perfect for braai, oven, air fryer, or adding to stews and sauces.</p>
+                    <div class="menu-card-footer">
+                        <span class="price">R150</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToBasket('hard-body-chicken')" aria-label="Add Hard Body Chicken to cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-image">
+                    <span class="badge badge-value">500g</span>
+                    <img src="images/beef-ribs-medium.webP" alt="Smoked Beef Ribs 500g" loading="lazy">
+                </div>
+                <div class="menu-card-content">
+                    <h3 class="menu-card-title"><span class="text-primary">Smoked</span> Beef Ribs 500g</h3>
+                    <p class="menu-card-alt">Slow-smoked short or back ribs, packed in a vacuum-sealed bag.</p>
+                    <p class="menu-card-description">&bull; <strong>500g rack - perfect for individual portion</strong></p>
+                    <p class="menu-card-alt">Rich, smoky, and tender. Ready to reheat on the braai stand, in the oven, or air fryer.<br>Enjoy as-is or add to your favourite meal.</p>
+                    <div class="menu-card-footer">
+                        <span class="price">R130</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToBasket('beef-ribs-500')" aria-label="Add Smoked Beef Ribs 500g to cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-card">
+                <div class="menu-card-image">
+                    <span class="badge badge-value">750g</span>
+                    <img src="images/beef-ribs-large.webP" alt="Smoked Beef Ribs 750g" loading="lazy">
+                </div>
+                <div class="menu-card-content">
+                    <h3 class="menu-card-title"><span class="text-primary">Smoked</span> Beef Ribs 750g</h3>
+                    <p class="menu-card-alt">Slow-smoked short or back ribs, packed in a vacuum-sealed bag.</p>
+                    <p class="menu-card-description">&bull; <strong>750g rack- great for sharing</strong></p>
+                    <p class="menu-card-alt">Rich, smoky, and tender. Ready to reheat on the braai stand, in the oven, or air fryer.<br>Enjoy as-is or add to your favourite meal.</p>
+                    <div class="menu-card-footer">
+                        <span class="price">R150</span>
+                        <button class="btn btn-primary btn-sm" onclick="addToBasket('beef-ribs-750')" aria-label="Add Smoked Beef Ribs 750g to cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="order-note">
+            <svg class="clock-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+            </svg>
+            Orders must be placed 1–2 days in advance before pick up or delivery date
+        </p>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section class="how-it-works">
+    <div class="how-it-works-container">
+        <h2 class="section-title centered">How It <span class="text-primary">Works</span></h2>
+        <p class="section-subtitle">Add items to your cart, then checkout via WhatsApp &mdash; From order to your plate</p>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-icon">
+                    <span class="step-number">1</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+                    </svg>
+                </div>
+                <h3>Add items to cart</h3>
+                <p>Select the items you want to order</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <span class="step-number">2</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                    </svg>
+                </div>
+                <h3>Checkout via WhatsApp</h3>
+                <p>You'll be redirected to WhatsApp to complete your order</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <span class="step-number">3</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2c-1.5 3-3 4.5-3 7.5s1.5 4.5 3 4.5 3-1.5 3-4.5-1.5-4.5-3-7.5z"/>
+                        <path d="M8 22h8"/><path d="M12 14v8"/>
+                    </svg>
+                </div>
+                <h3>We smoke in small batches</h3>
+                <p>Tuesdays and Fridays — low and slow</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <span class="step-number">4</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/>
+                    </svg>
+                </div>
+                <h3>Vacuum-sealed for freshness</h3>
+                <p>Products are sealed to preserve flavour</p>
+            </div>
+            <div class="step">
+                <div class="step-icon">
+                    <span class="step-number">5</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                        <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                    </svg>
+                </div>
+                <h3>Collect or get delivery</h3>
+                <p>Or find limited stock at selected partner shops</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="about-container">
+        <div class="about-content">
+            <h2 class="section-title">Crafted the <span class="text-primary">Nafasi</span> Way</h2>
+            <p class="about-text">Nafasi was born from a love for deeply flavoured food and traditional African smoking methods. We believe good smoked meat takes time, patience, and respect for the process. That's why we cook low and slow, using real fire, real ingredients, and no shortcuts. Nafasi is a small, community-focused smokehouse committed to quality over quantity; delivering honest food you can trust, share, and enjoy</p>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2c-1.5 3-3 4.5-3 7.5s1.5 4.5 3 4.5 3-1.5 3-4.5-1.5-4.5-3-7.5z"/>
+                            <path d="M8 22h8"/><path d="M12 14v8"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Wood-Fire Smoked</h3>
+                        <p>Traditional smoking methods for authentic flavour</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Local Delivery</h3>
+                        <p>Serving Centurion, Pretoria, and Midrand areas</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Quality Guaranteed</h3>
+                        <p>Fresh ingredients, authentic African recipes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="images/beef-ribs-large.webP" alt="Smoked meat with herbs" loading="lazy">
+        </div>
+    </div>
+</section>
+
+<!-- Where to Find Us Section -->
+<section id="find-us" class="find-us">
+    <div class="find-us-container">
+        <h2 class="section-title centered">Where to <span class="text-primary">Find Us</span></h2>
+        <p class="section-subtitle">Pick up your favourite smoked meats in-store or order for delivery.</p>
+        <div class="find-us-card">
+            <div class="find-us-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3592.8!2d28.2035!3d-25.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ4JzAwLjAiUyAyOMKwMTInMTIuNiJF!5e0!3m2!1sen!2sza!4v1"
+                    width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" title="KAM African Products Shop">
+                </iframe>
+            </div>
+            <div class="find-us-content">
+                <div class="find-us-header">
+                    <div class="find-us-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                            <circle cx="12" cy="10" r="3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="find-us-title">KAM African Products Shop</h3>
+                        <p class="find-us-description">Our products are available for purchase at our partner African food store in Lyttelton. Each smoked meat is freshly packaged in a vacuum-sealed bag and kept frozen to preserve flavour and quality.</p>
+                    </div>
+                </div>
+                <div class="find-us-address">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    <span>154 Cradock Avenue, Lyttelton, Centurion</span>
+                    <a href="https://www.google.com/maps/search/154+Cradock+Avenue+Lyttelton+Centurion" target="_blank" class="directions-link">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
+                            <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="order" class="cta">
+    <div class="cta-container">
+        <h2 class="cta-title">Ready to Taste the <span class="text-white">Difference</span>?</h2>
+        <p class="cta-subtitle">Place your order today and experience authentic African smoked flavours delivered fresh to your door.</p>
+        <div class="cta-buttons">
+            <a href="https://wa.me/27671231122" class="btn btn-white">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                WhatsApp Order
+            </a>
+            <a href="https://instagram.com/Nafasi_foods" class="btn btn-outline-light btn-follow">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                Follow Us
+            </a>
+        </div>
+        <div class="cta-contact">
+            <a href="tel:+27671231122" class="cta-contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                067 123 11 22
+            </a>
+            <a href="https://instagram.com/Nafasi_foods" class="cta-contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                @Nafasi_foods
+            </a>
+            <span class="cta-contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                    <circle cx="12" cy="10" r="3"/>
+                </svg>
+                Centurion, Pretoria & Midrand
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="Logo.svg" alt="Nafasi Logo" loading="lazy">
+        </div>
+        <p class="footer-copyright">© 2026 Nafasi Foods. All rights reserved.</p>
+        <p class="footer-hashtags">GENERATED BY NYAHCODEWORKS</p>
+    </div>
+</footer>
+
+<!-- Floating Basket Button -->
+<button class="basket-btn" id="basketBtn" aria-label="Open basket">
+    <svg viewBox="0 0 24 24" stroke-width="2">
+        <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+        <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+    </svg>
+    <span class="basket-count hidden" id="basketCount">0</span>
+</button>
+
+<!-- Basket Overlay -->
+<div class="basket-overlay" id="basketOverlay"></div>
+
+<!-- Basket Sidebar -->
+<div class="basket-sidebar" id="basketSidebar">
+    <div class="basket-header">
+        <h3 class="basket-title">Your Basket</h3>
+        <button class="basket-close" id="basketClose" aria-label="Close basket">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+    <div class="basket-items" id="basketItems">
+        <div class="basket-empty" id="basketEmpty">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+            </svg>
+            <p>Your basket is empty</p>
+        </div>
+    </div>
+    <div class="basket-footer">
+        <div class="basket-total">
+            <span class="basket-total-label">Total:</span>
+            <span class="basket-total-value" id="basketTotal">R0</span>
+        </div>
+        <button class="checkout-btn" id="checkoutBtn" disabled>
+            <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Checkout via WhatsApp
+        </button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
